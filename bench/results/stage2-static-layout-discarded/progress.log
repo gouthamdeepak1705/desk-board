@@ -1,0 +1,33 @@
+2026-10-27T07:44:33.212Z  preflight gpt-5.6-luna: ok
+2026-10-27T07:44:34.580Z  preflight gpt-6-luna: ok
+2026-10-27T07:44:35.718Z  preflight gpt-6.1-terra: ok
+2026-10-27T07:44:37.712Z  preflight gpt-5.6-sol: ok
+2026-10-27T07:44:37.713Z  START stage=stage2 models=gpt-5.6-luna,gpt-6-luna,gpt-6.1-terra,gpt-5.6-sol runs=1 planned=324 (81 task-size combos)
+2026-10-27T07:44:51.229Z  PASS gpt-5.6-luna  A1 S100 run1 7.5s steps=2 tok=20897/76
+2026-10-27T07:45:07.836Z  PASS gpt-6-luna    A1 S100 run1 9.2s steps=2 tok=20871/64
+2026-10-27T07:45:22.983Z  PASS gpt-6.1-terra A1 S100 run1 7.8s steps=2 tok=20863/56
+2026-10-27T07:45:37.949Z  PASS gpt-5.6-sol   A1 S100 run1 8s steps=2 tok=20889/72
+2026-10-27T07:45:52.605Z  PASS gpt-5.6-luna  A1 S60 run1 7.7s steps=2 tok=20908/82
+2026-10-27T07:46:10.815Z  PASS gpt-6-luna    A1 S60 run1 11.1s steps=2 tok=20874/66
+2026-10-27T07:46:31.826Z  PASS gpt-6.1-terra A1 S60 run1 13.6s steps=2 tok=20864/57
+2026-10-27T07:46:50.500Z  PASS gpt-5.6-sol   A1 S60 run1 11.3s steps=2 tok=20894/75
+2026-10-27T07:47:06.997Z  PASS gpt-5.6-luna  A1 S35 run1 8.2s steps=2 tok=20912/80
+2026-10-27T07:47:22.577Z  PASS gpt-6-luna    A1 S35 run1 8.3s steps=2 tok=20864/61
+2026-10-27T07:47:37.841Z  PASS gpt-6.1-terra A1 S35 run1 8.2s steps=2 tok=20878/64
+2026-10-27T07:47:55.285Z  PASS gpt-5.6-sol   A1 S35 run1 10.1s steps=2 tok=20900/78
+2026-10-27T07:48:10.999Z  PASS gpt-5.6-luna  A1 S20 run1 8.6s steps=2 tok=20902/75
+2026-10-27T07:48:29.021Z  PASS gpt-6-luna    A1 S20 run1 10.7s steps=2 tok=20864/60
+2026-10-27T07:48:44.637Z  PASS gpt-6.1-terra A1 S20 run1 8.3s steps=2 tok=20864/57
+2026-10-27T07:49:01.717Z  PASS gpt-5.6-sol   A1 S20 run1 9.7s steps=2 tok=20942/99
+2026-10-27T07:49:16.864Z  PASS gpt-5.6-luna  A2 S100 run1 7.9s steps=2 tok=20966/107
+2026-10-27T07:49:31.678Z  PASS gpt-6-luna    A2 S100 run1 7.6s steps=2 tok=20870/59
+2026-10-27T07:49:45.549Z  PASS gpt-6.1-terra A2 S100 run1 6.7s steps=2 tok=20870/59
+2026-10-27T07:50:01.033Z  PASS gpt-5.6-sol   A2 S100 run1 8.1s steps=2 tok=20944/96
+2026-10-27T07:50:16.616Z  PASS gpt-5.6-luna  A2 S60 run1 8.4s steps=2 tok=20928/88
+2026-10-27T07:50:32.102Z  PASS gpt-6-luna    A2 S60 run1 8.4s steps=2 tok=20870/60
+2026-10-27T07:50:47.290Z  PASS gpt-6.1-terra A2 S60 run1 7.8s steps=2 tok=20882/65
+2026-10-27T07:51:06.253Z  PASS gpt-5.6-sol   A2 S60 run1 11.8s steps=2 tok=20934/92
+2026-10-27T07:51:22.461Z  PASS gpt-5.6-luna  A2 S35 run1 8.9s steps=2 tok=20920/84
+2026-10-27T07:51:40.749Z  PASS gpt-6-luna    A2 S35 run1 10.9s steps=2 tok=20870/59
+2026-10-27T07:51:56.337Z  PASS gpt-6.1-terra A2 S35 run1 8.2s steps=2 tok=20908/78
+2026-10-27T07:52:04.267Z  interrupted A2 gpt-5.6-sol; retrying

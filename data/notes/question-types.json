@@ -1,0 +1,15 @@
+{
+  "id": "question-types",
+  "title": "Question types: what's built",
+  "category": "images",
+  "color": "gray",
+  "border": "solid",
+  "order": 0,
+  "w": 720,
+  "h": 504,
+  "body": "![Table of 12 question types with examples and build status](images/img-mvqmlmio-0.png)",
+  "x": 392,
+  "y": 16,
+  "updated": "2026-10-27T11:55:37.662Z",
+  "z": 28
+}

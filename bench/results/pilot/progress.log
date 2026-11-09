@@ -1,0 +1,15 @@
+2026-10-27T04:20:52.867Z  START stage=pilot models=gpt-5.6-sol runs=1 planned=10 (10 task-size combos)
+2026-10-27T04:21:07.838Z  PASS gpt-5.6-sol   A1 S100 run1 9s steps=2 tok=20895/75
+2026-10-27T04:21:26.869Z  PASS gpt-5.6-sol   A1 S35 run1 11.8s steps=2 tok=20900/78
+2026-10-27T04:21:42.417Z  PASS gpt-5.6-sol   A2 S100 run1 8.2s steps=2 tok=20932/90
+2026-10-27T04:21:49.571Z  interrupted A2 gpt-5.6-sol; retrying
+2026-10-27T05:35:10.739Z  preflight gpt-5.6-sol: ok
+2026-10-27T05:35:10.741Z  START stage=pilot models=gpt-5.6-sol runs=1 planned=10 (10 task-size combos)
+2026-10-27T05:35:26.432Z  PASS gpt-5.6-sol   A2 S35 run1 9s steps=2 tok=20942/95
+2026-10-27T05:35:52.258Z  FAIL gpt-5.6-sol   A3 S100 run1 18.2s steps=4 tok=49795/291
+2026-10-27T05:36:39.222Z  PASS gpt-5.6-sol   A3 S35 run1 39.5s steps=8 tok=143547/861
+2026-10-27T05:37:00.700Z  PASS gpt-5.6-sol   C1 S100 run1 14s steps=2 tok=20959/96
+2026-10-27T05:37:19.262Z  PASS gpt-5.6-sol   C1 S35 run1 11s steps=2 tok=20944/97
+2026-10-27T05:37:35.149Z  PASS gpt-5.6-sol   E5 S100 run1 8.3s steps=2 tok=20921/87
+2026-10-27T05:37:50.776Z  PASS gpt-5.6-sol   E5 S35 run1 8.3s steps=2 tok=20918/85
+2026-10-27T05:37:52.960Z  DONE
