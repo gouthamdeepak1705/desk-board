@@ -1,0 +1,170 @@
+[
+ {
+  "id": "R1",
+  "sev": "high",
+  "title": "malformed / odd JSON lines never crash the worker (null, [], 123, \"str\", truncated, huge nesting, unknown op, __proto__ ops)",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "R1b",
+  "sev": "high",
+  "title": "the JSON line \"null\" specifically (m=null -> TypeError thrown inside catch)",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "R2",
+  "sev": "high",
+  "title": "op fuzz: every op x wrong-typed args answers (ok or error) in <3s and the worker stays alive",
+  "ok": true,
+  "obs": "1056 calls survived"
+ },
+ {
+  "id": "R3",
+  "sev": "high",
+  "title": "SQL injection strings and FTS5 query syntax (quotes, NEAR, *, col:, parens, ^, -) in every text arg: tables intact, no error, no exfil",
+  "ok": true,
+  "obs": "recall(since:\"abc\") -> ok"
+ },
+ {
+  "id": "R4",
+  "sev": "high",
+  "title": "SIGKILL mid-batch (pipelined remember/addFacts txs): integrity_check ok, fts/fact/episode counts consistent, restart works",
+  "ok": true,
+  "obs": "killed after 51/4000 facts; consistent; restart stats.facts=51"
+ },
+ {
+  "id": "R5",
+  "sev": "high",
+  "title": "index.js: killing the worker -> pending calls reject quickly, auto-restart within ~4s, no uncaught EPIPE in the host",
+  "ok": true,
+  "obs": "restarted in 777ms; 1 of 40 in-flight calls rejected (memory process stopped)"
+ },
+ {
+  "id": "R6",
+  "sev": "medium",
+  "title": "two clients/workers on the same DB interleaving writes: no SQLITE_BUSY errors surface",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "R7a",
+  "sev": "medium",
+  "title": "1 MB capture + adversarial 1 MB regex inputs complete fast (ReDoS) and do not block the worker",
+  "ok": true,
+  "obs": "words:216ms digits:108ms digitsNoSpace:77ms pins:59ms pwspaces:39ms keyblocks:14ms b64:46ms dashes:80ms unicode:117ms ; db+wal=15MB for 9 MB input (no per-episode size cap)"
+ },
+ {
+  "id": "R7b",
+  "sev": "medium",
+  "title": "10,000 captures: throughput, worker stays responsive, recall latency",
+  "ok": true,
+  "obs": "10k captures 34432ms (3443.20ms each), recall 23ms, episodes=10000, pending() returns 100"
+ },
+ {
+  "id": "R8",
+  "sev": "high",
+  "title": "pause semantics: nothing stored while paused (capture/remember/addFacts/recall logging), recall still works, resume works",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "R8b",
+  "sev": "medium",
+  "title": "pause via index.js: extractNow while paused skips (no claude call)",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E1",
+  "sev": "low",
+  "title": "embed.js: key file missing -> clean error, no key in message",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E2:401",
+  "sev": "medium",
+  "title": "embed.js: API 401 -> rejects cleanly, message never contains the key",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E2:429",
+  "sev": "medium",
+  "title": "embed.js: API 429 -> rejects cleanly, message never contains the key",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E2:500",
+  "sev": "medium",
+  "title": "embed.js: API 500 -> rejects cleanly, message never contains the key",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E2:bad json body",
+  "sev": "medium",
+  "title": "embed.js: API bad json body -> rejects cleanly, message never contains the key",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E2:wrong count",
+  "sev": "medium",
+  "title": "embed.js: API wrong count -> rejects cleanly, message never contains the key",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E2:missing embedding field",
+  "sev": "medium",
+  "title": "embed.js: API missing embedding field -> rejects cleanly, message never contains the key",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E2:network error echoing headers",
+  "sev": "medium",
+  "title": "embed.js: API network error echoing headers -> rejects cleanly, message never contains the key",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E3",
+  "sev": "medium",
+  "title": "embed.js: slow API honours timeoutMs (abort)",
+  "ok": true,
+  "obs": "aborted after 313ms"
+ },
+ {
+  "id": "E4",
+  "sev": "medium",
+  "title": "embed.js: a key with an illegal header char (real fetch) fails without echoing the key",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E5",
+  "sev": "medium",
+  "title": "embed.js: caches a stale key forever except on 401; re-reading the file after rotate",
+  "ok": true,
+  "obs": "rotated key file NOT picked up until a 401 (cache); info only"
+ },
+ {
+  "id": "E6",
+  "sev": "medium",
+  "title": "index.js recall with a hung/slow embedder: bounded latency and no pile-up (query vector failures never trip the 3-strike pause)",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "E7",
+  "sev": "low",
+  "title": "index.js: wrong-dimension vector from setEmbeddings wipes the whole in-memory vector index",
+  "ok": true,
+  "obs": ""
+ }
+]

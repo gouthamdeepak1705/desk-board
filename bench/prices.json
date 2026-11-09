@@ -1,0 +1,12 @@
+{
+  "_note": "US dollars per 1 million tokens. From third-party price sites in October 2026, which disagree with each other; none is OpenAI's own page. Check platform.openai.com/pricing before relying on the cost numbers. 'est' marks a model whose price I could not find (copied from the nearest sibling).",
+  "gpt-5.6-sol":   { "in": 4.00, "out": 20.00, "note": "promo price through 2026-11-21; list price $5 / $30" },
+  "gpt-5.6-luna":  { "in": 0.20, "out": 1.20 },
+  "gpt-5.6-terra": { "in": 2.00, "out": 12.00 },
+  "gpt-6-sol":     { "in": 2.00, "out": 10.00, "note": "est: copied from gpt-6.1-sol" },
+  "gpt-6-luna":    { "in": 0.10, "out": 0.50 },
+  "gpt-6.1-sol":   { "in": 2.00, "out": 10.00 },
+  "gpt-6.1-terra": { "in": 2.00, "out": 12.00, "note": "est: copied from gpt-5.6-terra" },
+  "gpt-5.5":       { "in": 5.00, "out": 30.00 },
+  "gpt-5.4-mini":  { "in": 0.75, "out": 4.50 }
+}

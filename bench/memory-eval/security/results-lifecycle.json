@@ -1,0 +1,37 @@
+[
+ {
+  "id": "L1",
+  "sev": "medium",
+  "title": "maintain(): expired raw_text is nulled, de-indexed from ep_fts, and absent from the files after checkpoint+close",
+  "ok": false,
+  "obs": "expired raw text still in file bytes: memory.db:zorblaxian (no VACUUM/secure_delete)"
+ },
+ {
+  "id": "L2",
+  "sev": "low",
+  "title": "TTL table: unknown / odd source types and prototype keys get a finite expiry",
+  "ok": true,
+  "obs": "{\"user_voice\":365,\"screen_text\":14,\"email\":60,\"clipboard\":90,\"constructor\":90,\"toString\":90}"
+ },
+ {
+  "id": "L3",
+  "sev": "medium",
+  "title": "logs have retention: retrieval_log / candidate_log / memory_op do not grow forever and maintain() trims them",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "L4",
+  "sev": "medium",
+  "title": "WAL growth under sustained writes stays bounded; checkpoint state at idle",
+  "ok": true,
+  "obs": "facts=3000; after 3000 remembers: db=7.3MB wal=4.2MB (default autocheckpoint 1000 pages; no explicit checkpoint/TRUNCATE ever issued by the app)"
+ },
+ {
+  "id": "L5",
+  "sev": "high",
+  "title": "backup feasibility: copying memory.db alone while the worker is running yields an openable, consistent DB (recent commits missing is expected)",
+  "ok": true,
+  "obs": "db-only copy 375/400 facts ic=ok; db+wal racy copy -> 400 ic=ok; VACUUM INTO 1200 ic=ok (app has no backup/export op)"
+ }
+]

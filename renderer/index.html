@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:">
+<title>Desk Board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <span class="brand"><b>▌</b>desk-board</span>
+  <span class="stat" id="stat"></span>
+  <span class="voice" id="voiceStat"></span>
+  <span class="voice" id="agentStat"></span>
+  <span class="jobs" id="jobStat"></span>
+  <span class="grow"></span>
+  <input id="search" class="search" placeholder="search notes" autocomplete="off" spellcheck="false">
+  <button class="tb" id="addNote">+ note</button>
+  <button class="tb" id="tidy" title="Re-arrange all notes into a neat grid">tidy</button>
+  <span class="clock" id="clock"></span>
+  <button class="tb win" id="btnMin" title="Minimize">–</button>
+  <button class="tb win close" id="btnClose" title="Close">×</button>
+</header>
+<main class="canvas" id="canvas">
+
+  <section class="panel sys" id="p-calendar" data-sys="calendar">
+    <div class="ph"><span class="sq" style="--c:var(--blue)"></span><span class="pt">calendar</span><span class="grow"></span>
+      <button class="ib" id="calPrev">‹</button><span class="cal-title" id="calTitle"></span><button class="ib" id="calNext">›</button></div>
+    <div class="pb cal">
+      <div class="cal-dow" id="calDow"></div>
+      <div class="cal-grid" id="calGrid"></div>
+    </div>
+    <i class="rz"></i>
+  </section>
+
+  <section class="panel sys" id="p-agenda" data-sys="agenda">
+    <div class="ph"><span class="sq" style="--c:var(--green)"></span><span class="pt" id="agendaTitle">upcoming</span></div>
+    <div class="pb agenda" id="agendaList"></div>
+    <i class="rz"></i>
+  </section>
+
+  <section class="panel sys" id="p-apps" data-sys="apps">
+    <div class="ph"><span class="sq" style="--c:var(--orange)"></span><span class="pt">apps</span></div>
+    <div class="pb agenda" id="appsList"></div>
+    <i class="rz"></i>
+  </section>
+
+  <section class="panel sys" id="p-muse" data-sys="muse">
+    <div class="ph"><span class="sq" style="--c:var(--pink)"></span><span class="pt">muse</span><span class="muse-stat" id="museStat"></span>
+      <span class="grow"></span>
+      <button class="ib" id="museSetup" title="Show the WhatsApp window (first-time set-up or if the chat is not found)">setup</button></div>
+    <div class="pb chat">
+      <div class="log" id="museBody"></div>
+      <div class="prompt" id="musePrompt">
+        <span class="ps">&gt;</span>
+        <textarea id="museInput" rows="1" spellcheck="false" placeholder="ask muse…"></textarea>
+        <i class="fake-caret" id="museCaret"></i>
+        <button class="go" id="museSend" title="Send (Enter)">send</button>
+      </div>
+    </div>
+    <i class="rz"></i>
+  </section>
+
+  <section class="panel sys" id="p-memory" data-sys="memory">
+    <div class="ph"><span class="sq" style="--c:var(--teal)"></span><span class="pt">memory</span><span class="mem-count" id="memCount"></span>
+      <span class="grow"></span>
+      <button class="ib" id="memPause" title="Pause or resume learning from conversations">pause</button></div>
+    <div class="mem-tabs" id="memTabs">
+      <button data-tab="known" class="on">known</button><button data-tab="review">to review</button><button data-tab="people">people &amp; projects</button>
+    </div>
+    <div class="pb mem-body" id="memBody"></div>
+    <div class="prompt">
+      <span class="ps">+</span>
+      <input id="memInput" spellcheck="false" placeholder="add a memory…">
+      <i class="fake-caret" id="memCaret"></i>
+      <button class="go" id="memAdd" title="Remember this (Enter)">add</button>
+    </div>
+    <i class="rz"></i>
+  </section>
+
+  <section class="panel sys" id="p-chat" data-sys="chat">
+    <div class="ph"><span class="sq" id="orb" style="--c:var(--purple)"></span><span class="pt" id="chatName">chat</span>
+      <span class="grow"></span>
+      <select id="chatModel" class="sel" title="Model used by the chat">
+        <option value="">default</option>
+        <option value="claude-fable-5-1">fable 5.1</option>
+        <option value="claude-opus-5-5">opus 5.5</option>
+        <option value="claude-sonnet-5-5">sonnet 5.5</option>
+        <option value="claude-haiku-5-5">haiku 5.5</option>
+      </select>
+      <button class="ib talk" id="chatTalk" title="Talk to the board">talk</button>
+      <button class="ib" id="chatNew" title="Start a fresh conversation">new</button>
+      <button class="ib" id="chatToggle" title="Collapse">–</button></div>
+    <div class="pb chat">
+      <div class="log" id="chatLog"></div>
+      <div class="attach" id="chatAttach" hidden></div>
+      <div class="prompt">
+        <span class="ps">&gt;</span>
+        <textarea id="chatInput" rows="1" spellcheck="false"></textarea>
+        <i class="fake-caret" id="fakeCaret"></i>
+        <button class="go" id="chatSend" title="Send (Enter)">run</button>
+      </div>
+    </div>
+    <i class="rz"></i>
+  </section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

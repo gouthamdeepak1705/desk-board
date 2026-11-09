@@ -1,0 +1,16 @@
+{
+  "name": "desk-board",
+  "version": "0.1.0",
+  "description": "A full-screen desktop whiteboard with notes, a calendar and an AI agent powered by Claude Code",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.0.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "koffi": "^3.3.4"
+  }
+}

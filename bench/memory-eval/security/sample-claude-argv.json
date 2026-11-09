@@ -1,0 +1,1 @@
+["-p","--output-format","json","--tools","--strict-mcp-config","--disable-slash-commands","--disallowedTools","Bash,Edit,Write,NotebookEdit,WebSearch,WebFetch,Read,Glob,Grep,Task,PowerShell,Agent,Skill,mcp__*"]

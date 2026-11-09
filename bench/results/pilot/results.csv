@@ -1,0 +1,11 @@
+time,stage,model,task,group,size,run,pass,secs,steps,calls,in_tokens,out_tokens,hedges,detail,answer
+"2026-10-27T04:21:07.026Z","pilot","gpt-5.6-sol","A1","A click accuracy","S100","1","true","9","2","3","20895","75","0","{""pass"":true,""firstHit"":true,""firstDist"":2,""clicks"":1}","Clicked the blue “Open report” button."
+"2026-10-27T04:21:26.214Z","pilot","gpt-5.6-sol","A1","A click accuracy","S35","1","true","11.8","2","3","20900","78","0","{""pass"":true,""firstHit"":true,""firstDist"":3,""clicks"":1}","Clicked the blue “Open report” button."
+"2026-10-27T04:21:41.742Z","pilot","gpt-5.6-sol","A2","A click accuracy","S100","1","true","8.2","2","3","20932","90","0","{""pass"":true,""firstHit"":true,""firstDist"":1,""clicks"":1}","Clicked the red square labeled 7."
+"2026-10-27T05:35:25.338Z","pilot","gpt-5.6-sol","A2","A click accuracy","S35","1","true","9","2","3","20942","95","0","{""pass"":true,""firstHit"":true,""firstDist"":0,""clicks"":1}","Clicked the red square labeled 7."
+"2026-10-27T05:35:51.521Z","pilot","gpt-5.6-sol","A3","A click accuracy","S100","1","false","18.2","4","5","49795","291","0","{""pass"":false,""firstHit"":true,""firstDist"":0,""clicks"":3}","Clicked the close icon on the notification card."
+"2026-10-27T05:36:38.477Z","pilot","gpt-5.6-sol","A3","A click accuracy","S35","1","true","39.5","8","9","143547","861","0","{""pass"":true,""firstHit"":true,""firstDist"":0,""clicks"":7}","Clicked the small red X in the notification card’s top-right corner."
+"2026-10-27T05:36:59.975Z","pilot","gpt-5.6-sol","C1","C scrolling","S100","1","true","14","2","3","20959","96","1","{""pass"":true}","The archive code is **QX-7731-LM**."
+"2026-10-27T05:37:18.356Z","pilot","gpt-5.6-sol","C1","C scrolling","S35","1","true","11","2","3","20944","97","0","{""pass"":true}","The archive code is **QX-7731-LM**."
+"2026-10-27T05:37:34.408Z","pilot","gpt-5.6-sol","E5","E hard","S100","1","true","8.3","2","3","20921","87","0","{""pass"":true,""clicked"":""dl2""}","Clicked the Download button for Quarterly report 2."
+"2026-10-27T05:37:50.070Z","pilot","gpt-5.6-sol","E5","E hard","S35","1","true","8.3","2","3","20918","85","0","{""pass"":true,""clicked"":""dl2""}","Clicked the Download button for Quarterly report 2."

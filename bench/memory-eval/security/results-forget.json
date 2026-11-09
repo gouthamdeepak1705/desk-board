@@ -1,0 +1,114 @@
+[
+ {
+  "id": "F1",
+  "sev": "high",
+  "title": "forget (remember path): forgotten text absent from every table, fts index, and fts shadow tables",
+  "ok": true,
+  "obs": "tables clean (includes retrieval_log query? see F1b)"
+ },
+ {
+  "id": "F1b",
+  "sev": "high",
+  "title": "forget also scrubs retrieval_log.query / feedback / suggestion_log text that quotes the forgotten memory",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "F2",
+  "sev": "high",
+  "title": "forget: raw sqlite bytes (db, -wal, free pages) no longer contain the forgotten text",
+  "ok": true,
+  "obs": "while running: [] | after close: [] | after checkpoint: [] | after VACUUM: []"
+ },
+ {
+  "id": "F3",
+  "sev": "high",
+  "title": "forget leaves no residue in fact row metadata (subject/predicate/entities/aliases) of the tombstone",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "F4",
+  "sev": "high",
+  "title": "supersede + forget: forgetting the NEW fact removes its text from memory_op (SUPERSEDE row is keyed on the old id)",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "F4b",
+  "sev": "medium",
+  "title": "supersede + forget: forgetting the NEW fact leaves the old one archived with superseded_by -> dangling id; old city stays archived (not restored)",
+  "ok": false,
+  "obs": "after forgetting the wrong/newer fact the previous fact is archived (superseded_by=2); recall(\"where do I live\") => [\"Lives in Zanzibarq\"]"
+ },
+ {
+  "id": "F5",
+  "sev": "high",
+  "title": "forget of a fact whose source episode also supports other facts: forgotten text must not survive in that episode raw_text",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "F5b",
+  "sev": "high",
+  "title": "forget BY ID of a fact whose source episode also supports another fact: forgotten text must not survive in the shared episode raw_text / quote",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "F6",
+  "sev": "high",
+  "title": "forget does not delete unrelated facts or erase unrelated episodes (the 2-word AND sweep over ep_fts)",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "F7",
+  "sev": "high",
+  "title": "forget by ambiguous query refuses and deletes nothing",
+  "ok": true,
+  "obs": "ambiguous refused; empty / stopword-only queries delete nothing"
+ },
+ {
+  "id": "F7b",
+  "sev": "medium",
+  "title": "forget with one generic word matching exactly one fact deletes it without confirmation (single-token query)",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "F8",
+  "sev": "high",
+  "title": "forget removes the embedding (db + in-memory index) and a late setEmbeddings cannot resurrect it",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "F9",
+  "sev": "medium",
+  "title": "orphaned entities are removed; entities shared with other facts keep their rows but not the forgotten fact's aliases",
+  "ok": false,
+  "obs": "entities still mention forgotten text: priya||my zorbitis friend| ; Atlas|||"
+ },
+ {
+  "id": "F10",
+  "sev": "high",
+  "title": "forgotten fact cannot be resurrected by confirm / pin / list",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "F11",
+  "sev": "medium",
+  "title": "forget before extraction: the same statement sitting in an unprocessed episode is not re-extracted after a 1-word forget",
+  "ok": true,
+  "obs": ""
+ },
+ {
+  "id": "F12",
+  "sev": "medium",
+  "title": "forget with id on already-forgotten / nonexistent / weird ids",
+  "ok": true,
+  "obs": "[{\"forgotten\":0,\"erased_raw\":0,\"was\":[]},{\"err\":\"Unknown named parameter '0'\"}]"
+ }
+]
